@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Display a random image</title>
+
+    <style>
+      body {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <button id="jsstyle" onclick="display_random_image()">Show Image</button>
+    </div>
+
+    <script>
+      function display_random_image() {
+        var images = [
+          {
+            src: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+            width: 240,
+            height: 160,
+          },
+
+          {
+            src: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+            width: 320,
+            height: 195,
+          },
+
+          {
+            src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+            width: 500,
+            height: 343,
+          },
+        ];
+
+        var soNgauNhien = Math.random();
+
+        soNgauNhien = soNgauNhien * images.length;
+
+        var vitri = Math.floor(soNgauNhien);
+
+        var image = images[vitri];
+
+        var img = document.createElement("img");
+
+        img.src = image.src;
+
+        img.width = image.width;
+
+        img.height = image.height;
+
+        document.body.appendChild(img);
+      }
+    </script>
+  </body>
+</html>

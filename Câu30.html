@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Insert row in a table</title>
+  </head>
+  <body>
+    <!-- Bảng mẫu ban đầu: mỗi <tr> là một hàng, mỗi <td> là một ô. -->
+    <table id="sampleTable" border="1">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+    </table>
+    <br />
+    <!-- Khi bấm nút, trình duyệt gọi hàm insert_Row() ở bên dưới. -->
+    <input type="button" onclick="insert_Row()" value="Insert row" />
+
+    <script>
+      // Thuật toán thêm một hàng mới vào cuối bảng:
+      // 1. Tìm bảng cần cập nhật bằng id.
+      // 2. Tạo hàng mới ở vị trí cuối bảng.
+      // 3. Tạo hai ô trong hàng theo thứ tự từ trái sang phải.
+      // 4. Gán nội dung cho từng ô.
+      // Mỗi lần gọi hàm, các bước này chạy lại nên bảng có thêm một hàng.
+      function insert_Row() {
+        // Lấy phần tử <table id="sampleTable"> trong trang.
+        // table là tham chiếu tới chính bảng, không phải bản sao của bảng.
+        var table = document.getElementById("sampleTable");
+
+        // insertRow(-1) tạo hàng mới ở cuối bảng.
+        // Giá trị -1 là cách chỉ vị trí cuối; hàng mới được trả về để tiếp tục thao tác.
+        var row = table.insertRow(-1);
+
+        // Tạo ô đầu tiên tại chỉ số 0 (ô bên trái) trong hàng mới.
+        var cell1 = row.insertCell(0);
+
+        // Tạo ô thứ hai tại chỉ số 1 (nằm sau ô thứ nhất).
+        var cell2 = row.insertCell(1);
+
+        // Gán văn bản hiển thị cho từng ô; innerText được dùng để đặt nội dung chữ.
+        cell1.innerText = "New Row cell1";
+        cell2.innerText = "New Row cell2";
+      }
+    </script>
+  </body>
+</html>

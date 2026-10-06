@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Câu 2 - Lấy họ tên từ form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Return first and last name from a form</h1>
+      <form id="nameForm">
+        <label for="firstName">First name:</label>
+        <input id="firstName" name="firstName" value="Nguyen" />
+        <label for="lastName">Last name:</label>
+        <input id="lastName" name="lastName" value="An" />
+        <div class="actions">
+          <button id="domSubmit" type="button">Submit (DOM)</button>
+          <button id="jquerySubmit" type="button">Submit (jQuery)</button>
+        </div>
+      </form>
+      <p id="result" role="status">Họ tên sẽ hiển thị ở đây.</p>
+    </main>
+  </body>
+</html>

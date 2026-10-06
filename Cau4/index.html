@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Câu 4 - Xóa mục trong danh sách</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Remove items from a dropdown list</h1>
+      <label for="colorSelect">Chọn màu muốn xóa:</label>
+      <select id="colorSelect">
+        <option value="" selected disabled>-- Chọn màu --</option>
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+      </select>
+      <div class="actions">
+        <button id="domRemove" type="button">Select and Remove (DOM)</button>
+        <button id="jqueryRemove" type="button">Select and Remove (jQuery)</button>
+      </div>
+      <p id="status" role="status"></p>
+    </main>
+  </body>
+</html>

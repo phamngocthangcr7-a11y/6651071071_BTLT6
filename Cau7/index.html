@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Câu 7 - Xác nhận chuyển hướng</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Chuyển hướng đến đường link</h1>
+      <p>Nhập đường link và nhấn Submit để xác nhận chuyển hướng:</p>
+      <form id="redirectForm">
+        <label for="targetUrl">Đường link (http/https):</label>
+        <input
+          id="targetUrl"
+          name="targetUrl"
+          type="url"
+          value="https://example.com/"
+          placeholder="https://example.com"
+          required
+        />
+        <div class="actions">
+          <button id="domSubmit" type="submit">Submit (DOM)</button>
+          <button id="jquerySubmit" type="button">Submit (jQuery)</button>
+        </div>
+      </form>
+      <p id="status" role="status"></p>
+    </main>
+  </body>
+</html>

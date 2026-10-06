@@ -1,0 +1,44 @@
+body {
+  margin: 30px;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+}
+
+.card {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 18px #1f29371a;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  background: #2563eb;
+  cursor: pointer;
+}
+
+#imageContainer {
+  display: grid;
+  min-height: 180px;
+  margin-top: 18px;
+  place-items: center;
+  overflow: auto;
+  background: #f8fafc;
+}
+
+#imageContainer img {
+  max-width: 100%;
+  height: auto;
+}
